@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Click Click</title>
+    <style>
+       #button{
+        cursor: pointer;
+       }
+       .n{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20pt;
+       }
+       .f{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20pt;
+       }
+    </style>
+</head>
+<body>
+    <p class="n">Введите ваше имя </p> <input id="name" />
+    <p class="f">Введите фамилию </p> <input id="fam" />
+    <p id="button"> ЖМИ!!!</p>
+    <p id="message"></p>
+    <script>
+        function test(){
+let name = document.querySelector('#name')
+let fam = document.querySelector('#fam')
+let message = document.querySelector('#message')
+if(name.value == ""){
+    alert("Ошибка: введите имя ");
+}
+else{
+message.innerHTML += " " + "Доброго времени суток, " + name.value + " " + fam.value
+}}
+let btn = document.querySelector('#button')
+btn.addEventListener('click', test)
+    </script>
+</body>
+</html>

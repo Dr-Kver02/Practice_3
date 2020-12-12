@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Click Click</title>
+    <style>
+       #button{
+        cursor: pointer;
+       }
+       .n{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20pt;
+       }
+       .f{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20pt;
+       }
+    </style>
+</head>
+<body>
+    <p class="n">Наименование товара </p> <input id="name" />
+    <p class="f">Количество </p> <input id="kol" />
+    <p id="button"> ЖМИ!!!</p>
+    <p id="message"></p>
+    <p id="message_2"></p>
+    <script>
+        let sum=0;
+        function test(){
+            
+let name = document.querySelector('#name')
+let kol = document.querySelector('#kol')
+let message = document.querySelector('#message')
+let text = name.value + ", " + kol.value + " шт."
+sum = +sum + +kol.value
+            message.innerHTML += '<br>' + text
+            let message_2 = document.querySelector('#message_2')
+            message_2.innerHTML = '<br>' + "Итого: " + sum + " шт."
+        }
+
+let btn = document.querySelector('#button')
+btn.addEventListener('click', test)
+    </script>
+</body>
+</html>
